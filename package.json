@@ -16,5 +16,13 @@
     "mongoose": "^6.2.7"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdk445/PUSH-JSON-ARRAY.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sdk445/PUSH-JSON-ARRAY/issues"
+  },
+  "homepage": "https://github.com/sdk445/PUSH-JSON-ARRAY#readme"
 }
