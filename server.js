@@ -21,7 +21,7 @@ app.use('/parents', parentRouter)
 
 //landing page instructions
 app.get('/', (req, res) => { 
-    res.send('Welcome to the Parent-Child Relationship API. Please use the following endpoints to interact with the database: \n/parents \n/parents/:id *i have also implimented delete and update routes* , GITHUB LINK -"https://github.com/sdk445/PUSH-JSON-ARRAY.git"')
+    res.send('Welcome to the Parent-Child Relationship API. Please use the following endpoints to interact with the database: \n/parents \n/parents/:id *i have also implimented delete and update routes* , GITHUB LINK -"https://github.com/sdk445/PUSH-JSON-ARRAY.git" // master branch')
   
 })
 
