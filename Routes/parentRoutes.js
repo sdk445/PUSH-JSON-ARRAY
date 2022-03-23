@@ -1,8 +1,5 @@
 const express = require('express')
 const router = express.Router()
-
-
-
 //import parent model from '../models/parentModel'
 const parents = require('../models/parentModel')
 //get parents 
@@ -25,14 +22,17 @@ router.get('/:id', async (req, res) => {
     }
 })
 //create parent 
-router.post('/',  async (req, res) => {
-    const parent = new parents({
+
+router.post('/', async (req, res) => {
+    var parent = new parents({
         name: req.body.name,
         child: req.body.child
     })
+    
+    
     try { 
-         console.log(parent)
-        const savedParent = await parent.save()
+        console.log('post parent')
+        const savedParent = await parents.create(req.body)
        res.json(savedParent)
     } catch (err) {
         res.json({ message: err })
@@ -42,7 +42,7 @@ router.post('/',  async (req, res) => {
 //delete parent by id
 router.delete('/:id', async (req, res) => {
     try {
-        const removedParent = await parents.remove({ _id: req.params.id })
+        const removedParent = await parents.deleteOne({ _id: req.params.id })
         res.json(removedParent)
     } catch (err) {
         res.json({ message: err })

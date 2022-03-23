@@ -1,15 +1,15 @@
 const mongoose = require('mongoose')
+const Schema = mongoose;
+
 
 // Schema for parents
-const ParentSchema = new mongoose.Schema(
-    [
-        {
-            name: { type: String},
-            child: { type: Array }
-        }
-    ],
-
-) 
+const ParentSchema = new mongoose.Schema({
+    name:String,
+    child:[Object]
+}
+    
    
-module.exports = mongoose.model('parents', ParentSchema)
 
+)
+//export parent schema
+module.exports = mongoose.model('parents', ParentSchema)
