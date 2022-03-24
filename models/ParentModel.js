@@ -5,7 +5,7 @@ const Schema = mongoose;
 // Schema for parents
 const ParentSchema = new mongoose.Schema({
     name:String,
-    child:[Object]
+    child:[Array]
 }
     
    
